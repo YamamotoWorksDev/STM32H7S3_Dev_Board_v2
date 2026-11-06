@@ -10748,6 +10748,12 @@
 		(uuid "014baf3f-7f06-44cf-80f0-1840a9dca9ce")
 	)
 	(junction
+		(at 433.07 -41.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "034fe736-d13d-47e4-af99-71bd9ba98471")
+	)
+	(junction
 		(at 281.94 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11226,6 +11232,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ec36fa57-dc06-427f-a4b6-80fb8ef116d6")
+	)
+	(junction
+		(at 433.07 -29.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ed5c650d-6845-4c61-a8b2-d838b8eda0fc")
 	)
 	(junction
 		(at 251.46 222.25)
@@ -11767,6 +11779,16 @@
 	)
 	(wire
 		(pts
+			(xy 433.07 -41.91) (xy 444.5 -41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11202123-ca7c-404e-b586-ae4aa2edbb43")
+	)
+	(wire
+		(pts
 			(xy 228.6 234.95) (xy 256.54 234.95)
 		)
 		(stroke
@@ -11854,6 +11876,16 @@
 			(type default)
 		)
 		(uuid "184dbca3-5b2f-4dae-bdcb-70c124173d96")
+	)
+	(wire
+		(pts
+			(xy 444.5 -31.75) (xy 444.5 -29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18c66332-261e-4d03-82cc-744db4532dfc")
 	)
 	(wire
 		(pts
@@ -13447,6 +13479,16 @@
 	)
 	(wire
 		(pts
+			(xy 433.07 -29.21) (xy 444.5 -29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b17d1e9-d29b-4b8d-bb83-6fb6fd042dca")
+	)
+	(wire
+		(pts
 			(xy 363.22 135.89) (xy 368.3 135.89)
 		)
 		(stroke
@@ -13734,6 +13776,16 @@
 			(type default)
 		)
 		(uuid "8e7c453b-6bcd-45fa-94e4-9447d666e949")
+	)
+	(wire
+		(pts
+			(xy 444.5 -39.37) (xy 444.5 -41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fbe647e-2dfc-4901-9da7-b39c61c654c3")
 	)
 	(wire
 		(pts
@@ -24113,6 +24165,87 @@
 	)
 	(symbol
 		(lib_id "Device:C")
+		(at 444.5 -35.56 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7bff3c12-865a-4cbf-951e-1c517a9aa015")
+		(property "Reference" "C88"
+			(at 450.85 -36.322 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 450.85 -34.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 443.5348 -39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 444.5 -35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 444.5 -35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a1efd0dd-16dc-4a2d-9f7f-56c21be3d4c9")
+		)
+		(pin "2"
+			(uuid "39b331f8-a61a-463a-a9b7-2563f991aca4")
+		)
+		(instances
+			(project "STM32H7S3_Dev_Board"
+				(path "/9c594957-fd6c-4305-bab8-fba79a4c5d5c/f671a3b0-c237-47c5-a1ed-15d9ecc26d22"
+					(reference "C88")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
 		(at 462.28 279.4 90)
 		(unit 1)
 		(body_style 1)
@@ -31412,107 +31545,4 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "Device:C")
-		(at 444.5000 -35.5600 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7bff3c12-865a-4cbf-951e-1c517a9aa015")
-		(property "Reference" "C88"
-			(at 450.8500 -36.3220 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1uF"
-			(at 450.8500 -34.2900 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 443.5348 -39.3700 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 444.5000 -35.5600 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 444.5000 -35.5600 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a1efd0dd-16dc-4a2d-9f7f-56c21be3d4c9")
-		)
-		(pin "2"
-			(uuid "39b331f8-a61a-463a-a9b7-2563f991aca4")
-		)
-		(instances
-			(project "STM32H7S3_Dev_Board"
-				(path "/9c594957-fd6c-4305-bab8-fba79a4c5d5c/f671a3b0-c237-47c5-a1ed-15d9ecc26d22"
-					(reference "C88")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts (xy 433.07 -41.91) (xy 444.5 -41.91))
-		(stroke (width 0) (type default))
-		(uuid "11202123-ca7c-404e-b586-ae4aa2edbb43")
-	)
-	(wire
-		(pts (xy 433.07 -29.21) (xy 444.5 -29.21))
-		(stroke (width 0) (type default))
-		(uuid "7b17d1e9-d29b-4b8d-bb83-6fb6fd042dca")
-	)
-	(wire
-		(pts (xy 444.5 -39.37) (xy 444.5 -41.91))
-		(stroke (width 0) (type default))
-		(uuid "8fbe647e-2dfc-4901-9da7-b39c61c654c3")
-	)
-	(wire
-		(pts (xy 444.5 -31.75) (xy 444.5 -29.21))
-		(stroke (width 0) (type default))
-		(uuid "18c66332-261e-4d03-82cc-744db4532dfc")
-	)
-	(junction (at 433.07 -41.91) (diameter 0) (color 0 0 0 0) (uuid "034fe736-d13d-47e4-af99-71bd9ba98471"))
-	(junction (at 433.07 -29.21) (diameter 0) (color 0 0 0 0) (uuid "ed5c650d-6845-4c61-a8b2-d838b8eda0fc"))
 )
