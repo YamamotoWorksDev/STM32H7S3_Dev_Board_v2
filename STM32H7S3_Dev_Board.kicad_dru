@@ -1,0 +1,25 @@
+(version 1)
+
+# JUMBLEQ rev.D custom rules (2026-10-28)
+# U2 (TFBGA225, 0.8mm pitch) fanout: allow 0.1mm track/clearance inside the BGA courtyard (JLCPCB multilayer min 0.09mm)
+(rule "U2_BGA_fanout"
+	(condition "A.intersectsCourtyard('U2')")
+	(constraint track_width (min 0.1mm))
+	(constraint clearance (min 0.1mm)))
+
+# Dogbone vias under U2: 0.45/0.2mm (smallest size without JLCPCB surcharge)
+(rule "U2_BGA_via"
+	(condition "A.Type == 'Via' && A.intersectsCourtyard('U2')")
+	(constraint via_diameter (min 0.45mm))
+	(constraint hole_size (min 0.2mm)))
+(rule "U3_QFN_pads"
+	(condition "A.Type == 'Pad' && B.Type == 'Pad' && A.intersectsCourtyard('U3') && B.intersectsCourtyard('U3')")
+	(constraint clearance (min 0.1mm)))
+
+# USB 90ohm differential on In2.Cu (L3, between In1/In3): JLCPCB calculator for JLC06161H-2116A -> 0.1636/0.2032mm
+# (L1/L6 use the netclass value 0.175/0.203mm = calculator 0.1753/0.2032mm)
+(rule "USB_diff_L3"
+	(layer "In2.Cu")
+	(condition "A.hasNetclass('USB_HS') || A.hasNetclass('USB_FS')")
+	(constraint track_width (min 0.1mm) (opt 0.164mm))
+	(constraint diff_pair_gap (min 0.127mm) (opt 0.203mm)))

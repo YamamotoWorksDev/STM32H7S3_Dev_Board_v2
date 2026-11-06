@@ -1,0 +1,2783 @@
+{
+  "source_directory": "C:\\Users\\shun\\STM32H7S3_Dev_Board\\STM32H7S3_Dev_Board_revD",
+  "destination_directory": "C:\\Users\\shun\\STM32H7S3_Dev_Board_v2",
+  "base_commit": "d0d3be12d89cdd684040df29236a2a2d7f94f28d",
+  "branch": "codex/recover-revd-history",
+  "setup": {
+    "commit_number": 1,
+    "subject": "rev.Dの履歴復元方針と管理対象を定義",
+    "commit_message": "rev.Dの履歴復元方針と管理対象を定義\n\n保存記録とハッシュから再構成する履歴の対象・順序・制約を記録する。\n作業用データとKiCadの一時ファイル・生成物をGit管理から除外する。\nKiCad原本と既存設計文書の改行を保存し、Gitの自動変換による原本差異を防ぐ。\n",
+    "changed_files": [
+      ".gitattributes",
+      ".gitignore",
+      "Docs/history/recovery-plan.md",
+      "Docs/history/recovery-manifest.json"
+    ]
+  },
+  "steps": [
+    {
+      "number": 1,
+      "task": "decoupling-rework",
+      "kind": "baseline",
+      "subject": "rev.Dの最初に確認できる保存状態を取り込み",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "f92c8304d98683908f19d16ac70a291979a73ce1b6ce70c61d208da859ec82b3",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "02b8634a6f5deb9b2feb956a640237d02768b214cccabd59274c126fbcb4c1e9"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_dru",
+        "STM32H7S3_Dev_Board.kicad_pcb",
+        "STM32H7S3_Dev_Board.kicad_pro"
+      ],
+      "evidence": {
+        "before_files": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 2,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/decoupling-rework/before.kicad_pcb",
+        "STM32H7S3_Dev_Board.kicad_pro": ".work/decoupling-rework/after.kicad_pro",
+        "STM32H7S3_Dev_Board.kicad_dru": ".work/decoupling-rework/after.kicad_dru",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/decoupling-rework/before-design.md"
+      },
+      "commit_message": "rev.Dの最初に確認できる保存状態を取り込み\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/decoupling-rework\n最初に原本を確認できるPCB・設計書・設定を取り込む。回路図は原本を確認できる時点から追加する。\n"
+    },
+    {
+      "number": 2,
+      "task": "decoupling-rework",
+      "kind": "adopted",
+      "subject": "MCUデカップリング部品の配置と配線を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "9ec39ff9b3b89c14e90c93009e6f254bdeadd5860125c0cbaf71480f39602afa",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "02b8634a6f5deb9b2feb956a640237d02768b214cccabd59274c126fbcb4c1e9"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": null,
+        "accepted_snapshot_files": {
+          "STM32H7S3_Dev_Board.kicad_pcb": "after.kicad_pcb"
+        }
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 3,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/decoupling-rework/after.kicad_pcb"
+      },
+      "commit_message": "MCUデカップリング部品の配置と配線を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/decoupling-rework\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 3,
+      "task": "u11-decoupling-20261029",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（u11-decoupling-20261029開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "97d188de73c55035a8d38d6b2229a76da0975dd98a6a604d99b42b3c46d09cb5",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "94643b8b5646b5fe0b6e7ee41fde36f08cf4908a0dc22584b8a17f36830c4550"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 4,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/u11-decoupling-20261029/before.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/u11-decoupling-20261029/before-design.md"
+      },
+      "commit_message": "保存済み調整を反映（u11-decoupling-20261029開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/u11-decoupling-20261029\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 4,
+      "task": "u11-decoupling-20261029",
+      "kind": "adopted",
+      "subject": "PSRAMのデカップリング配置を改善",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "fe09b578bb977400f4f230d55932de0a6961dfd7be210b6f9d818cb74d381a39",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "94643b8b5646b5fe0b6e7ee41fde36f08cf4908a0dc22584b8a17f36830c4550"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": null,
+        "accepted_snapshot_files": {
+          "STM32H7S3_Dev_Board.kicad_pcb": "after.kicad_pcb"
+        }
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 5,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/u11-decoupling-20261029/after.kicad_pcb"
+      },
+      "commit_message": "PSRAMのデカップリング配置を改善\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/u11-decoupling-20261029\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 5,
+      "task": "u1-c24-c25-20261029",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（u1-c24-c25-20261029開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "6450e080c727f975297c4b0df4d5998703f546344b4802f04b29a03a81ec20ee",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "ea376c3b427c4c4560166cce1f9205827a30cd00b6c9344e354dda0f4d4fba95"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 6,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/u1-c24-c25-20261029/before.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/u1-c24-c25-20261029/before-design.md"
+      },
+      "commit_message": "保存済み調整を反映（u1-c24-c25-20261029開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/u1-c24-c25-20261029\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 6,
+      "task": "u1-c24-c25-20261029",
+      "kind": "adopted",
+      "subject": "FLASHのC24・C25周辺配線を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "018bc9113c0a38e3153b92de3999f97afcbb9052e6877b745ca84887529562b6",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "ea376c3b427c4c4560166cce1f9205827a30cd00b6c9344e354dda0f4d4fba95"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": null,
+        "accepted_snapshot_files": {
+          "STM32H7S3_Dev_Board.kicad_pcb": "after.kicad_pcb"
+        }
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 7,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/u1-c24-c25-20261029/after.kicad_pcb"
+      },
+      "commit_message": "FLASHのC24・C25周辺配線を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/u1-c24-c25-20261029\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 7,
+      "task": "u1-c3-20261029",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（u1-c3-20261029開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "92b7fba31ff466a1be3c670de1fe2366a6b23073b95927aed914a63087b5462d",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "025ee130d3797e0d83cd7aa0f303cd087a08ae7540727e1e3ff4f5aeadea8c57"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 8,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/u1-c3-20261029/before.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/u1-c3-20261029/before-design.md"
+      },
+      "commit_message": "保存済み調整を反映（u1-c3-20261029開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/u1-c3-20261029\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 8,
+      "task": "u1-c3-20261029",
+      "kind": "adopted",
+      "subject": "FLASHのC3を再配置",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "be3f59fb4d9172356c6e00e9c1fb0104dcc799a36409c3e22d44ad70ab553229",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "025ee130d3797e0d83cd7aa0f303cd087a08ae7540727e1e3ff4f5aeadea8c57"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": null,
+        "accepted_snapshot_files": {
+          "STM32H7S3_Dev_Board.kicad_pcb": "after.kicad_pcb"
+        }
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 9,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/u1-c3-20261029/after.kicad_pcb"
+      },
+      "commit_message": "FLASHのC3を再配置\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/u1-c3-20261029\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 9,
+      "task": "u2-c18-c30-20261029",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（u2-c18-c30-20261029開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "8a8dead5a94c2ca5aebe2bbf579a82dddafda5e67709e90dda46dcd620da612d",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "96f931cf992cc26ebe97b95887472d40e806f072657e261f97ee4a2a23540aa8"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 10,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/u2-c18-c30-20261029/before.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/u2-c18-c30-20261029/before-design.md"
+      },
+      "commit_message": "保存済み調整を反映（u2-c18-c30-20261029開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/u2-c18-c30-20261029\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 10,
+      "task": "u2-c18-c30-20261029",
+      "kind": "adopted",
+      "subject": "MCUのC18・C30を再配置",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "9940c71b833671c5b349cbd26ceba43acd8605ccf7a2c159c52311141ea0eb39",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "96f931cf992cc26ebe97b95887472d40e806f072657e261f97ee4a2a23540aa8"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": null,
+        "accepted_snapshot_files": {
+          "STM32H7S3_Dev_Board.kicad_pcb": "after.kicad_pcb"
+        }
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 11,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/u2-c18-c30-20261029/after.kicad_pcb"
+      },
+      "commit_message": "MCUのC18・C30を再配置\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/u2-c18-c30-20261029\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 11,
+      "task": "u2-five-power-20261029",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（u2-five-power-20261029開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "fb3f54012775ff1fd54a692f35437580db132d640490e6d2b17c9601b124e1aa",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "55e69e4e8c938702135cc259892bb37fa87ff2beba560ae90bbb8a2ccc3406e6"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 12,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/u2-five-power-20261029/before.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/u2-five-power-20261029/before-design.md"
+      },
+      "commit_message": "保存済み調整を反映（u2-five-power-20261029開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/u2-five-power-20261029\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 12,
+      "task": "u2-five-power-20261029",
+      "kind": "adopted",
+      "subject": "MCU電源ピン周辺を整理しC88を追加",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "bee163eb76ec54b706e53006f2e21823e1975fc35d73ea64649a0e391f2442c5",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "d9226c04c828dd6dba03bd735f1d2b453c9ceab439b01d4a9df3b7ead04d2300",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb",
+        "mcu.kicad_sch"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 13,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/u2-five-power-20261029/stage/STM32H7S3_Dev_Board.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/u2-five-power-20261029/after-design.md",
+        "mcu.kicad_sch": ".work/u2-five-power-20261029/stage/mcu.kicad_sch"
+      },
+      "commit_message": "MCU電源ピン周辺を整理しC88を追加\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/u2-five-power-20261029\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 13,
+      "task": "power-routing-20261029",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（power-routing-20261029開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "9f86be9495fad231016c5881c1577f07705137e34af2eb46bb80ce2bd42c2b46",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "d9226c04c828dd6dba03bd735f1d2b453c9ceab439b01d4a9df3b7ead04d2300",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 14,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/power-routing-20261029/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（power-routing-20261029開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/power-routing-20261029\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 14,
+      "task": "power-routing-20261029",
+      "kind": "adopted",
+      "subject": "電源経路とデカップリング配線を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "c2e65273d1a70e8c9a34b5497aef4ab5717c11547d3d5575d4cc9971b10c1f65",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "347c9f646eb4495253fa54810f28772a48eed6ee8c6cd79dfce90990bd8d6991",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 15,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/power-routing-20261029/polished.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/power-routing-20261029/after-design.md"
+      },
+      "commit_message": "電源経路とデカップリング配線を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/power-routing-20261029\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 15,
+      "task": "input-vbus-20261029",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（input-vbus-20261029開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "b99b41041b58c14bacf82d50ab37f9f71033e334ca7b8b29297f8e6a089a45c6",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "347c9f646eb4495253fa54810f28772a48eed6ee8c6cd79dfce90990bd8d6991",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb",
+        "STM32H7S3_Dev_Board.kicad_sch",
+        "dsp.kicad_sch",
+        "power.kicad_sch",
+        "usb.kicad_sch"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 16,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/input-vbus-20261029/before.kicad_pcb",
+        "dsp.kicad_sch": ".work/input-vbus-20261029/dsp.kicad_sch",
+        "power.kicad_sch": ".work/input-vbus-20261029/power.kicad_sch",
+        "STM32H7S3_Dev_Board.kicad_sch": ".work/input-vbus-20261029/STM32H7S3_Dev_Board.kicad_sch",
+        "usb.kicad_sch": ".work/input-vbus-20261029/usb.kicad_sch"
+      },
+      "commit_message": "保存済み調整を反映（input-vbus-20261029開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/input-vbus-20261029\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 16,
+      "task": "input-vbus-20261029",
+      "kind": "adopted",
+      "subject": "入力電源とVBUS経路を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "6316fb1157e04039d98ebf356d716cd1a57071328c384ba026055634624dc055",
+        "STM32H7S3_Dev_Board.kicad_pro": "8008802cb844cb6d5c68078c36de5655adea2a294df46f8e5595bf821fb847c4",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "bc66c874d2f9930dabbdc1ed21079fb4a9d612872d697d2e42bc9f0553f0bb6d",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 17,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/input-vbus-20261029/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/input-vbus-20261029/after-design.md"
+      },
+      "commit_message": "入力電源とVBUS経路を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/input-vbus-20261029\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 17,
+      "task": "c68-solid-20261029",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（c68-solid-20261029開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "ffe3775ddecd34b99965c49c8cf530e78e7762ef8da55ee66d437183af3998d1",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "bc66c874d2f9930dabbdc1ed21079fb4a9d612872d697d2e42bc9f0553f0bb6d",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb",
+        "STM32H7S3_Dev_Board.kicad_pro"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 18,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/c68-solid-20261029/before.kicad_pcb",
+        "STM32H7S3_Dev_Board.kicad_pro": ".work/c68-solid-20261029/after.kicad_pro"
+      },
+      "commit_message": "保存済み調整を反映（c68-solid-20261029開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/c68-solid-20261029\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 18,
+      "task": "c68-solid-20261029",
+      "kind": "adopted",
+      "subject": "C68周辺の電源接続を改善",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "b954287e1003069e8521a41757feb383ace53a0ca427eabd0cac6239809d680d",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "3fc44601a9d4c1fa8deb1ed542788232fbb777addd2da18bdf6672e688f10125",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 19,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/c68-solid-20261029/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/c68-solid-20261029/after-design.md"
+      },
+      "commit_message": "C68周辺の電源接続を改善\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/c68-solid-20261029\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 19,
+      "task": "power-zone-cleanup-20261029",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（power-zone-cleanup-20261029開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "bb60baec32736a73faec6deb9fbe6eed593229355e9063c5e2b0da7106057cbf",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "3fc44601a9d4c1fa8deb1ed542788232fbb777addd2da18bdf6672e688f10125",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 20,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/power-zone-cleanup-20261029/latest.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（power-zone-cleanup-20261029開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/power-zone-cleanup-20261029\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 20,
+      "task": "power-zone-cleanup-20261029",
+      "kind": "adopted",
+      "subject": "電源ゾーンと未使用銅箔を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "7c619060f764bbfa3c78e7f979c6bbba206bf507e9f439e6007caca1e4cc6d65",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "f212f0f243172c6207a0b274a0ff5976aa9c6011434495b3d3383ca0da0d2ce9",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 21,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/power-zone-cleanup-20261029/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/power-zone-cleanup-20261029/after-design.md"
+      },
+      "commit_message": "電源ゾーンと未使用銅箔を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/power-zone-cleanup-20261029\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 21,
+      "task": "ground-axis-20261029",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（ground-axis-20261029開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "c4bf9fb50a0de76d04023e1e620f1103203cf3384bbea3b46913a71c3267055a",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "f212f0f243172c6207a0b274a0ff5976aa9c6011434495b3d3383ca0da0d2ce9",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 22,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/ground-axis-20261029/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（ground-axis-20261029開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/ground-axis-20261029\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 22,
+      "task": "ground-axis-20261029",
+      "kind": "adopted",
+      "subject": "GND接続と引き出し形状を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "1beb5772b689eb827beff8703d4d61e960925b5b575980ba08860914f4e7fc4a",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "1bfbb414a1965d5579d603c9fd4297025de1c9dafb913bde6a8957bcbcb365db",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 23,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/ground-axis-20261029/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/ground-axis-20261029/after-design.md"
+      },
+      "commit_message": "GND接続と引き出し形状を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/ground-axis-20261029\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 23,
+      "task": "u5-output-20261030",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（u5-output-20261030開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "e8e03e6bd188d1870226f9a28a9d3c78963c0497d4a597f6930fa2dc9fd47154",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "1bfbb414a1965d5579d603c9fd4297025de1c9dafb913bde6a8957bcbcb365db",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 24,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/u5-output-20261030/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（u5-output-20261030開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/u5-output-20261030\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 24,
+      "task": "u5-output-20261030",
+      "kind": "adopted",
+      "subject": "U5の出力コンデンサ周辺を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "d94231d703981165ff09f403e18750d8fdf3579d84db5265b0d841ed4f1088d0",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "97e26ab52ef308c9d4316474aabc5bb8ecebc7096ef13e7966dae12f9d61db55",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 25,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/u5-output-20261030/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/u5-output-20261030/after-design.md"
+      },
+      "commit_message": "U5の出力コンデンサ周辺を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/u5-output-20261030\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 25,
+      "task": "sys-inner-20261030",
+      "kind": "adopted",
+      "subject": "5V_SYSを内層の電源ゾーンへ移設",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "93c6b4e2f2f9199a7175f354a35d66a45ae63aea51f1c306f4fd7c21df38f1e6",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "db07111f0fa5f9bb8ded47154fcdcb4fa9f8b2e3159381d7bd9bfed45c5511f9",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 26,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/sys-inner-20261030/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/sys-inner-20261030/after-design.md"
+      },
+      "commit_message": "5V_SYSを内層の電源ゾーンへ移設\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/sys-inner-20261030\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 26,
+      "task": "c67-axis-20261030",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（c67-axis-20261030開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "d8eccd63fc50f03852a776ff54656fd5f11c800a359ce9ef959d537cb82a0d10",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "db07111f0fa5f9bb8ded47154fcdcb4fa9f8b2e3159381d7bd9bfed45c5511f9",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 27,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/c67-axis-20261030/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（c67-axis-20261030開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/c67-axis-20261030\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 27,
+      "task": "c67-axis-20261030",
+      "kind": "adopted",
+      "subject": "C67の接続形状を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "009ebe074a4610c07305420c299754383a704b89a2b74de69e1c2a4027b9ef72",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "648111673c72f55fb609af28192808387606e76ae5c23b584a436fd1eb1dc4a8",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 28,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/c67-axis-20261030/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/c67-axis-20261030/after-design.md"
+      },
+      "commit_message": "C67の接続形状を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/c67-axis-20261030\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 28,
+      "task": "ucpd-width-review-20261030",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（ucpd-width-review-20261030開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "7c17218e6d298fef26146d50acfb7164c1ee3d2f1b092bec03eace23f31cc24a",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "648111673c72f55fb609af28192808387606e76ae5c23b584a436fd1eb1dc4a8",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 29,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/ucpd-width-review-20261030/baseline.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（ucpd-width-review-20261030開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/ucpd-width-review-20261030\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 29,
+      "task": "usb-fs-20261030",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（usb-fs-20261030開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "b1d2796928c43f890268e5d1c5cd1204d07f4cf54762f289c8ba7a67404217bc",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "648111673c72f55fb609af28192808387606e76ae5c23b584a436fd1eb1dc4a8",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 30,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/usb-fs-20261030/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（usb-fs-20261030開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/usb-fs-20261030\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 30,
+      "task": "usb-fs-20261030",
+      "kind": "adopted",
+      "subject": "U14周辺のUSB FS配線を引き直し",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "17978aa79a4131f8f537e49559abf9bb6727ccda8d80efe3519a6a603ae6c393",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "6487bb54eeeac5153d6f7f3c487e6f8e7ffd6c903828edf8aeaf46d58526c9e5",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 31,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/usb-fs-20261030/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/usb-fs-20261030/after-design.md"
+      },
+      "commit_message": "U14周辺のUSB FS配線を引き直し\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/usb-fs-20261030\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 31,
+      "task": "usb-fs-u14-tight-20261030",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（usb-fs-u14-tight-20261030開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "870643e7daa80f39d937d9d3b046e4f803a08a58888f729a3c4a70cdc58c5965",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "6487bb54eeeac5153d6f7f3c487e6f8e7ffd6c903828edf8aeaf46d58526c9e5",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 32,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/usb-fs-u14-tight-20261030/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（usb-fs-u14-tight-20261030開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/usb-fs-u14-tight-20261030\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 32,
+      "task": "usb-fs-u14-tight-20261030",
+      "kind": "adopted",
+      "subject": "U14のUSB FS差動配線を改善",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "f64ad6d32d87dce749ec9d166f5d96e3f8d601464d6b6a0a8d3738ece6505c21",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "f70d005646faeef61e4d351f91f89168b38f029e6cbbf7374e4069a1cb7672bf",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 33,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/usb-fs-u14-tight-20261030/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/usb-fs-u14-tight-20261030/after-design.md"
+      },
+      "commit_message": "U14のUSB FS差動配線を改善\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/usb-fs-u14-tight-20261030\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 33,
+      "task": "5vin-review-20261030",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（5vin-review-20261030開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "adf45a563b9e76701eedea60558f19d54864d8983e53686a1ee2227ecda9e7dd",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "f70d005646faeef61e4d351f91f89168b38f029e6cbbf7374e4069a1cb7672bf",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 34,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/5vin-review-20261030/current.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（5vin-review-20261030開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/5vin-review-20261030\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 34,
+      "task": "vbus-zones-review-20261030",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（vbus-zones-review-20261030開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "4b5ec06ee75968967fa816dd5f42167782a34a368ab5e4e4d22b4bd90c64e0ec",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "f70d005646faeef61e4d351f91f89168b38f029e6cbbf7374e4069a1cb7672bf",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 35,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/vbus-zones-review-20261030/current.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（vbus-zones-review-20261030開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/vbus-zones-review-20261030\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 35,
+      "task": "power-cleanup-review-20261030",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（power-cleanup-review-20261030開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "a0a825b47a223ee3eba39eeff86926f221dd41e913679cef55907a0ba47b193c",
+        "STM32H7S3_Dev_Board.kicad_pro": "93e7d47bf2b61ee49789f56d54faadf583921a1ba66d4eef8b407e51f844b5a6",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "f70d005646faeef61e4d351f91f89168b38f029e6cbbf7374e4069a1cb7672bf",
+        "mcu.kicad_sch": "0f2b088ad01047766780b4ea1db63692ce448aa72944e4df3c157c0bbc70f76c",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "4a1e7ceb5947f6f136f0abe389ec11b94165d7be00fcc667c0acd008b1b940bc",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 36,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/power-cleanup-review-20261030/current.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（power-cleanup-review-20261030開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/power-cleanup-review-20261030\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 36,
+      "task": "oscillators-20261030",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（oscillators-20261030開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "a0a825b47a223ee3eba39eeff86926f221dd41e913679cef55907a0ba47b193c",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "9b2d46ccc307d62bd7d3fe683741e12d0ef9a4b69d56cb92fcaa60fcb3afe6ff",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pro",
+        "mcu.kicad_sch",
+        "power.kicad_sch"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 37,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pro": ".work/oscillators-20261030/after.kicad_pro",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/oscillators-20261030/before-design.md",
+        "mcu.kicad_sch": ".work/adc-j1-routing-20261103/source/mcu.kicad_sch",
+        "power.kicad_sch": "power.kicad_sch"
+      },
+      "commit_message": "保存済み調整を反映（oscillators-20261030開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/oscillators-20261030\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 37,
+      "task": "oscillators-20261030",
+      "kind": "adopted",
+      "subject": "X1・X2の配置とクロック配線を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "a7e92d64d66f557fba779e271621239299fed6fba53ece97c3c2b50006b1a262",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "586a905c95d2b03485a9844a0d97b8df8bac81ad3661253be485aa71b05a6cbd",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 38,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/oscillators-20261030/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/oscillators-20261030/after-design.md"
+      },
+      "commit_message": "X1・X2の配置とクロック配線を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/oscillators-20261030\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 38,
+      "task": "usb-bga-review-20261030",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（usb-bga-review-20261030開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "e733d855caec0820a49959c4b53bf7442597e034275050765d445df5a0bebabd",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "586a905c95d2b03485a9844a0d97b8df8bac81ad3661253be485aa71b05a6cbd",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 39,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/usb-bga-review-20261030/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（usb-bga-review-20261030開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/usb-bga-review-20261030\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 39,
+      "task": "usb-bga-review-20261030",
+      "kind": "adopted",
+      "subject": "USBのBGA引き出し線幅を見直し",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "0f2b0bcee1b2c60f3ab9d3f56ea963802980451cb8647c461be59415207474a9",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "43f14e9a95ea787badf2fbcabbc3fc22f78a1bace18c00c56575bf7fc6ad2621",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 40,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/usb-bga-review-20261030/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/usb-bga-review-20261030/after-design.md"
+      },
+      "commit_message": "USBのBGA引き出し線幅を見直し\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/usb-bga-review-20261030\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 40,
+      "task": "psram-width-20261030",
+      "kind": "adopted",
+      "subject": "PSRAM配線の線幅と経路を見直し",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "6b0b4759ecd86957e8526457f3ba327c0b96620ceef6165aa49da4bfd0d9a43d",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "e845a7f86e5c3c339850115453577dcd40d6dc895836ee48729b518d67136066",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 41,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/psram-width-20261030/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/psram-width-20261030/after-design.md"
+      },
+      "commit_message": "PSRAM配線の線幅と経路を見直し\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/psram-width-20261030\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 41,
+      "task": "flash-width-20261030",
+      "kind": "adopted",
+      "subject": "FLASH配線の線幅と経路を見直し",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "9f4ec8805c632f287f79b775360fcbdf4fbcbf2d2bdcaebe7c4148fc9be37670",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "a1c5a733180b00cb21e6950d4352d5c9a85112f89b858208cec2655ac36dcfa9",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 42,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/flash-width-20261030/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/flash-width-20261030/after-design.md"
+      },
+      "commit_message": "FLASH配線の線幅と経路を見直し\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/flash-width-20261030\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 42,
+      "task": "u2-manual-review-20261030",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（u2-manual-review-20261030開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "54fd834320c1327aba047face2fc0431d59846da5b3cae36363aabce8e698d90",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "a1c5a733180b00cb21e6950d4352d5c9a85112f89b858208cec2655ac36dcfa9",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 43,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/u2-manual-review-20261030/filled.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（u2-manual-review-20261030開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/u2-manual-review-20261030\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 43,
+      "task": "dvdd-r27-recheck-20261030",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（dvdd-r27-recheck-20261030開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "807b42ffeba501fc9f8c69ec54c1b467a6dcff0339c40c989c75e5fb9f915b15",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "a1c5a733180b00cb21e6950d4352d5c9a85112f89b858208cec2655ac36dcfa9",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 44,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/dvdd-r27-recheck-20261030/filled.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（dvdd-r27-recheck-20261030開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/dvdd-r27-recheck-20261030\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 44,
+      "task": "dvdd-r27-cleanup-20261030",
+      "kind": "adopted",
+      "subject": "DVDD周辺とR27付近の不要配線を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "500fd611e6a6b08f1465f92f3c041c0ab6cb71bfe857dfad6be0b2a0ed5079ef",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "a1c5a733180b00cb21e6950d4352d5c9a85112f89b858208cec2655ac36dcfa9",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 45,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/dvdd-r27-cleanup-20261030/after.kicad_pcb"
+      },
+      "commit_message": "DVDD周辺とR27付近の不要配線を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/dvdd-r27-cleanup-20261030\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 45,
+      "task": "digital-routing-20261030",
+      "kind": "adopted",
+      "subject": "SWD・SAI・SPIとDSP周辺を配線",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "d98cfddcd66fd1049ef386e11786cdb25d1f43a2ec1235fe1aac273069c2a493",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "07861f11137707a2d4a3c8caaff3cafa50b41e03ed3551622a32abf45507820f",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 46,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/digital-routing-20261030/final.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/digital-routing-20261030/after-design.md"
+      },
+      "commit_message": "SWD・SAI・SPIとDSP周辺を配線\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/digital-routing-20261030\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 46,
+      "task": "routing-style-20261030",
+      "kind": "adopted",
+      "subject": "配線の幅変更と不要な曲げを整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "afdc3966a234a57e27d744f1f4210c38906b79984b281c68d1eff15e05cb4839",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "42043cb10ce777efc1b414a28a619a982988bd0f72b97bad4348fefb90c65226",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 47,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/routing-style-20261030/phase4.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/routing-style-20261030/after-design.md"
+      },
+      "commit_message": "配線の幅変更と不要な曲げを整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/routing-style-20261030\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 47,
+      "task": "usb-control-routing-20261030",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（usb-control-routing-20261030開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "afdc3966a234a57e27d744f1f4210c38906b79984b281c68d1eff15e05cb4839",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "42043cb10ce777efc1b414a28a619a982988bd0f72b97bad4348fefb90c65226",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "revD_new_symbols.kicad_sym"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 48,
+      "source_paths": {
+        "revD_new_symbols.kicad_sym": "revD_new_symbols.kicad_sym"
+      },
+      "commit_message": "保存済み調整を反映（usb-control-routing-20261030開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/usb-control-routing-20261030\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 48,
+      "task": "usb-control-routing-20261030",
+      "kind": "adopted",
+      "subject": "J9・J10・U7の残配線を接続",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "2ffcb6c7be5697aad367b8217ff75600b8640dc7e9b0da321d5400ed1a05fa54",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "30d11de948c0eece567efe6072ccaa1f46af0fdf0acbefc4d70bb3be860644f5",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 49,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/usb-control-routing-20261030/wide.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/usb-control-routing-20261030/after-design.md"
+      },
+      "commit_message": "J9・J10・U7の残配線を接続\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/usb-control-routing-20261030\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 49,
+      "task": "usb-via-cleanup-20261031",
+      "kind": "adopted",
+      "subject": "ビア近傍の配線形状を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "6b58151c848f3053beb46504fa72d5cbf208871dc7f8480f58f9b4b829786365",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "aad6f93afb5f6da5242704b14259c8db97d3585226db095612a47920b4be8edd",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 50,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/usb-via-cleanup-20261031/base.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/usb-via-cleanup-20261031/after-design.md"
+      },
+      "commit_message": "ビア近傍の配線形状を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/usb-via-cleanup-20261031\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 50,
+      "task": "hostcc2-width-20261031",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（hostcc2-width-20261031開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "fea8ba7a74ec8f49bdd76e51a24bfef7cb6ac3d435cbe15a2a0192f90c5a49cb",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "aad6f93afb5f6da5242704b14259c8db97d3585226db095612a47920b4be8edd",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 51,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/hostcc2-width-20261031/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（hostcc2-width-20261031開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/hostcc2-width-20261031\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 51,
+      "task": "hostcc2-width-20261031",
+      "kind": "adopted",
+      "subject": "HOST_CC2_DETの線幅と経路を改善",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "fda676c6e8e23bea0ae0e32ef2177c2f47aacc03815b1797c06612bdb1430a28",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "4d144783487d869dbea9b569f587449e6486d9acf5b014c4231daa16ce04369b",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 52,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/hostcc2-width-20261031/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/hostcc2-width-20261031/after-design.md"
+      },
+      "commit_message": "HOST_CC2_DETの線幅と経路を改善\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/hostcc2-width-20261031\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 52,
+      "task": "hostcc2-restore-20261031",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（hostcc2-restore-20261031開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "92c48d48bc526bd5c12c5ac1d29718688cb4f11a25627bf145450b24ec9be2e2",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "4d144783487d869dbea9b569f587449e6486d9acf5b014c4231daa16ce04369b",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 53,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/hostcc2-restore-20261031/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（hostcc2-restore-20261031開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/hostcc2-restore-20261031\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 53,
+      "task": "hostcc2-restore-20261031",
+      "kind": "adopted",
+      "subject": "手動保存後のHOST_CC2_DET修正を再反映",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "95c87c9a89201860937d0525fefa02860ba8e2d88ca594fcfd813fe8310f12c1",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "4d144783487d869dbea9b569f587449e6486d9acf5b014c4231daa16ce04369b",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 54,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/hostcc2-restore-20261031/after.kicad_pcb"
+      },
+      "commit_message": "手動保存後のHOST_CC2_DET修正を再反映\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/hostcc2-restore-20261031\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 54,
+      "task": "ucpd-isense-route-20261102",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（ucpd-isense-route-20261102開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "716ceec454cf4c1211bbe59cd542add94707daf990fb47cf0816773226372642",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "4d144783487d869dbea9b569f587449e6486d9acf5b014c4231daa16ce04369b",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 55,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/ucpd-isense-route-20261102/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（ucpd-isense-route-20261102開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/ucpd-isense-route-20261102\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 55,
+      "task": "ucpd-isense-route-20261102",
+      "kind": "adopted",
+      "subject": "UCPD_ISENSEの経路を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "f91c6bf10934cc91b9d79b188839c45cd91f466a77daebe5b410d5de93063969",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "90deee9505055abd9fee8abcc45c7c90445664cf59ec8f40ae1e2dbb2114b4f2",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 56,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/ucpd-isense-route-20261102/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/ucpd-isense-route-20261102/after-design.md"
+      },
+      "commit_message": "UCPD_ISENSEの経路を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/ucpd-isense-route-20261102\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 56,
+      "task": "dvdd-inner-20261102",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（dvdd-inner-20261102開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "6361772786aa526de1bb81752a8f100b0022904f4bcb99ffb02c7be4b0046adc",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "90deee9505055abd9fee8abcc45c7c90445664cf59ec8f40ae1e2dbb2114b4f2",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 57,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/dvdd-inner-20261102/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（dvdd-inner-20261102開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/dvdd-inner-20261102\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 57,
+      "task": "dvdd-inner-20261102",
+      "kind": "adopted",
+      "subject": "DVDDを内層へ移設しDSP周辺信号を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "29e702e1eabe9a797f41a11d89cb80e090605cafeec055cf578e9cad7eef6e5a",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "98c34d4e0a155e44187f7931bad94a14cc8d425b379dec6ffcac4c2998f0b182",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 58,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/dvdd-inner-20261102/after.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/dvdd-inner-20261102/after-design.md"
+      },
+      "commit_message": "DVDDを内層へ移設しDSP周辺信号を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/dvdd-inner-20261102\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 58,
+      "task": "usbi-ss-review-20261102",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（usbi-ss-review-20261102開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "d6dbd1155ad964e6f6444ff3bd54544edce570d526d421008b9a111b6dd32afc",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "98c34d4e0a155e44187f7931bad94a14cc8d425b379dec6ffcac4c2998f0b182",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 59,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/usbi-ss-review-20261102/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（usbi-ss-review-20261102開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/usbi-ss-review-20261102\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 59,
+      "task": "usbi-sclk-review-20261102",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（usbi-sclk-review-20261102開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "b1a5a453f8cb57dec2ebe9ff74708e61aed25ab1102dd47b153a33d7fd442479",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "98c34d4e0a155e44187f7931bad94a14cc8d425b379dec6ffcac4c2998f0b182",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 60,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/usbi-sclk-review-20261102/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（usbi-sclk-review-20261102開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/usbi-sclk-review-20261102\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 60,
+      "task": "status-control-20261102",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（status-control-20261102開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "5a4a69eb84b9431977c4ca31649bcb89435d62d20a407c3cb1de602506e1aa07",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "98c34d4e0a155e44187f7931bad94a14cc8d425b379dec6ffcac4c2998f0b182",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 61,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/status-control-20261102/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（status-control-20261102開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/status-control-20261102\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 61,
+      "task": "status-control-20261102",
+      "kind": "adopted",
+      "subject": "電源状態とホスト電源制御とLEDを配線",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "0a37dd322eac52f0839ff42bc2938e8b2306050596c7eec14ba7f73726d5f777",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "89d1eb9f5ba736d7c9d09b4c450e1a9ed6f9b527899fa933e06d5c22d0656102",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 62,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/status-control-20261102/final.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/status-control-20261102/after-design.md"
+      },
+      "commit_message": "電源状態とホスト電源制御とLEDを配線\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/status-control-20261102\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 62,
+      "task": "reset-switch-swap-20261102",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（reset-switch-swap-20261102開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "10c9faf371cd59ade61fcefef0f379b37b6d0d75b7ef2d7aa3d1fe8a059ccb65",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "89d1eb9f5ba736d7c9d09b4c450e1a9ed6f9b527899fa933e06d5c22d0656102",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 63,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/reset-switch-swap-20261102/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（reset-switch-swap-20261102開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/reset-switch-swap-20261102\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 63,
+      "task": "reset-switch-relocation-20261102",
+      "kind": "adopted",
+      "subject": "SW4とSW1の配置と配線を変更",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "5f56316abfe3e866792964a355f6141aeb2ab9f589ff10b11e612a639cf3853f",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "6c25bd7f88afb3a767e2b10d36a2085b6b68dacd000bfd3d6d75d2cb6caa4a8e",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 64,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/reset-switch-relocation-20261102/final.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/reset-switch-relocation-20261102/after-design.md"
+      },
+      "commit_message": "SW4とSW1の配置と配線を変更\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/reset-switch-relocation-20261102\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 64,
+      "task": "u2-j3-routing-20261102",
+      "kind": "adopted",
+      "subject": "MCUとJ3のRMII・SDMMC配線を接続",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "bea03042fba44e05d5e85adee41f9ccc889cd5b8236bf49e19b96fe4a3b3f1b5",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "b181c5b077b995240f8efb0157789180f8956e21d6dfec77344b4f1f59261646",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 65,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/u2-j3-routing-20261102/final.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/u2-j3-routing-20261102/final-design.md"
+      },
+      "commit_message": "MCUとJ3のRMII・SDMMC配線を接続\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/u2-j3-routing-20261102\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 65,
+      "task": "d2-width-review-20261103",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（d2-width-review-20261103開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "12379fdaf9668c04beadca8d7f364c91ef316bb01870768233677809e6fec3e1",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "b181c5b077b995240f8efb0157789180f8956e21d6dfec77344b4f1f59261646",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 66,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/d2-width-review-20261103/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（d2-width-review-20261103開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/d2-width-review-20261103\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 66,
+      "task": "d2-width-review-20261103",
+      "kind": "adopted",
+      "subject": "SDMMC周辺の細線区間と迂回を見直し",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "3f3be13037c00c7f44cae68a358efa5d3fccd40e8d3f34da08a1debfef613038",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "2c9aa1ab57e6b9bd7757fab1542b9f9a7063d1c19751bb0899fe4c2617796f1b",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 67,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/d2-width-review-20261103/final.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/d2-width-review-20261103/final-design.md"
+      },
+      "commit_message": "SDMMC周辺の細線区間と迂回を見直し\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/d2-width-review-20261103\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 67,
+      "task": "sdmmc-four-vias-20261103",
+      "kind": "adopted",
+      "subject": "SDMMCのD0からD3の信号ビア数を統一",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "cdf94f8c07acc0caacbd84942f454aa7507e1200f75d624d78f4834bfc1e27aa",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "c5c43993f46884eb133bee4ca0f6947f4ebdc4fe744f64156a0a66e648943a8c",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 68,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/sdmmc-four-vias-20261103/final.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/sdmmc-four-vias-20261103/final-design.md"
+      },
+      "commit_message": "SDMMCのD0からD3の信号ビア数を統一\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/sdmmc-four-vias-20261103\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 68,
+      "task": "adc-j1-routing-20261103",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（adc-j1-routing-20261103開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "13c7b386f3accbd1b9c4c36e95e69d352519a8d0b02b5e20d7119a1a72caa358",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "c5c43993f46884eb133bee4ca0f6947f4ebdc4fe744f64156a0a66e648943a8c",
+        "mcu.kicad_sch": "13507d704b2b8a161dc5885ecb699317adbae64afcae138eb1ca69178959c1b5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 69,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/adc-j1-routing-20261103/source/STM32H7S3_Dev_Board.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（adc-j1-routing-20261103開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/adc-j1-routing-20261103\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 69,
+      "task": "adc-j1-routing-20261103",
+      "kind": "adopted",
+      "subject": "J1を14ピンへ拡張しADC入力を配線",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "b30c48e03327273a24e1e4dd32e962a7455861d450189e64f98f65e53f0dc68f",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "fa7538a4d8cd0ee6a9c8aba7903dcc3ac7d98e001cefdb7fa678429c6106ac87",
+        "mcu.kicad_sch": "0557106dda6af172b64a11966b1cc5a38f9a3e9bfea276098de6ace2c18dc781",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb",
+        "mcu.kicad_sch"
+      ],
+      "evidence": {
+        "publication_record": "published-hashes.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 70,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/adc-j1-routing-20261103/final.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/adc-j1-routing-20261103/JUMBLEQ_mainboard_revD_design.md",
+        "mcu.kicad_sch": ".work/adc-j1-routing-20261103/mcu.kicad_sch"
+      },
+      "commit_message": "J1を14ピンへ拡張しADC入力を配線\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/adc-j1-routing-20261103\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 70,
+      "task": "j1-j6-shift-20261104",
+      "kind": "adopted",
+      "subject": "J1・J6を移動しJ1のGNDピンを変更",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "2d935eb1648b9a917d78f0665a33ef85beb728fb68317a83136bba6fb616aa45",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "2e4220599ee95e6d0ad0111f3363815021226f02a0456eaadd8aea84d9774acb",
+        "mcu.kicad_sch": "f0ea8ddb19ec8fb9c99f040f194c9310ef6438056955d6354b67da72fb2bc5b8",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb",
+        "mcu.kicad_sch"
+      ],
+      "evidence": {
+        "publication_record": "published-hashes.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 71,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/j1-j6-shift-20261104/final.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/j1-j6-shift-20261104/JUMBLEQ_mainboard_revD_design.md",
+        "mcu.kicad_sch": ".work/j1-j6-shift-20261104/mcu.kicad_sch"
+      },
+      "commit_message": "J1・J6を移動しJ1のGNDピンを変更\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/j1-j6-shift-20261104\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 71,
+      "task": "adc-in10-width-20261104",
+      "kind": "adopted",
+      "subject": "ADC1_IN10の線幅を統一",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "380d501d6fd3dbed2541c076e621220add22e08a5a0a3c3062dff94fa067bddb",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "2e4220599ee95e6d0ad0111f3363815021226f02a0456eaadd8aea84d9774acb",
+        "mcu.kicad_sch": "f0ea8ddb19ec8fb9c99f040f194c9310ef6438056955d6354b67da72fb2bc5b8",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published-hashes.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 72,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/adc-in10-width-20261104/routed.kicad_pcb"
+      },
+      "commit_message": "ADC1_IN10の線幅を統一\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/adc-in10-width-20261104\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 72,
+      "task": "adc-in5-style-20261104",
+      "kind": "adopted",
+      "subject": "ADC1_IN5の曲がりと線幅を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "b362b6fdc32fe80eed8ea7a399d92f84b6dee665508fdb78c03c5a41d4880b55",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "2e4220599ee95e6d0ad0111f3363815021226f02a0456eaadd8aea84d9774acb",
+        "mcu.kicad_sch": "f0ea8ddb19ec8fb9c99f040f194c9310ef6438056955d6354b67da72fb2bc5b8",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published-hashes.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 73,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/adc-in5-style-20261104/routed.kicad_pcb"
+      },
+      "commit_message": "ADC1_IN5の曲がりと線幅を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/adc-in5-style-20261104\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 73,
+      "task": "usbi-ss-style-20261104",
+      "kind": "adopted",
+      "subject": "USBi_SSの線幅と経路を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "58ac1da71f5cf5fd36818fba499ac88a5e03b2df0b003e24599be321ff300af4",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "2e4220599ee95e6d0ad0111f3363815021226f02a0456eaadd8aea84d9774acb",
+        "mcu.kicad_sch": "f0ea8ddb19ec8fb9c99f040f194c9310ef6438056955d6354b67da72fb2bc5b8",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published-hashes.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 74,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/usbi-ss-style-20261104/routed.kicad_pcb"
+      },
+      "commit_message": "USBi_SSの線幅と経路を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/usbi-ss-style-20261104\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 74,
+      "task": "adc-in3-style-20261104",
+      "kind": "adopted",
+      "subject": "ADC1_IN3の線幅変更を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "0147b81d5c9b837b17009c9d98b544b67ed7618f921607eb696579a55434bb4b",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "2e4220599ee95e6d0ad0111f3363815021226f02a0456eaadd8aea84d9774acb",
+        "mcu.kicad_sch": "f0ea8ddb19ec8fb9c99f040f194c9310ef6438056955d6354b67da72fb2bc5b8",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published-hashes.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 75,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/adc-in3-style-20261104/routed.kicad_pcb"
+      },
+      "commit_message": "ADC1_IN3の線幅変更を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/adc-in3-style-20261104\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 75,
+      "task": "eth-mdio-style-20261104",
+      "kind": "adopted",
+      "subject": "ETH_MDIOの線幅と経路を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "968f1ba72b71f350f18af15bb2bbad661e4fa2d5c1e8aaa05cee76981ae1d155",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "2e4220599ee95e6d0ad0111f3363815021226f02a0456eaadd8aea84d9774acb",
+        "mcu.kicad_sch": "f0ea8ddb19ec8fb9c99f040f194c9310ef6438056955d6354b67da72fb2bc5b8",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published-hashes.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 76,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/eth-mdio-style-20261104/routed.kicad_pcb"
+      },
+      "commit_message": "ETH_MDIOの線幅と経路を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/eth-mdio-style-20261104\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 76,
+      "task": "board-style-review-20261104",
+      "kind": "adopted",
+      "subject": "基板全体の線幅と経路を整理",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "4dec87c070ecec5e3266a5c1d72a531b1410b97b6286c958139f94563710d412",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "189bc6a34025e06ea7e65567db7b76d10b53b529f978d28092f6582f5800f173",
+        "mcu.kicad_sch": "f0ea8ddb19ec8fb9c99f040f194c9310ef6438056955d6354b67da72fb2bc5b8",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published-hashes.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 77,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/board-style-review-20261104/final.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/board-style-review-20261104/after-design.md"
+      },
+      "commit_message": "基板全体の線幅と経路を整理\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/board-style-review-20261104\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 77,
+      "task": "flash-control-completion-20261104",
+      "kind": "adopted",
+      "subject": "FLASHのECSとRESET周辺配線を完了",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "d5d86c68f11e38cc24bbf7463ddd35b6c93a294416d060a341a64e8c8854d677",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "6a41e347279a6c57980ac4e632181ccdd726767fadba43c2c653a204a6316575",
+        "mcu.kicad_sch": "f0ea8ddb19ec8fb9c99f040f194c9310ef6438056955d6354b67da72fb2bc5b8",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published-hashes.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 78,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/flash-control-completion-20261104/final.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/flash-control-completion-20261104/final-design.md"
+      },
+      "commit_message": "FLASHのECSとRESET周辺配線を完了\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/flash-control-completion-20261104\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 78,
+      "task": "i2c-sda-overlap-20261104",
+      "kind": "adopted",
+      "subject": "I2C2_SDAの重複配線を除去",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "a616ca0c40d90491404aa720290757634ea5c54427bfc68a7756dca13c9aecf7",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "6a41e347279a6c57980ac4e632181ccdd726767fadba43c2c653a204a6316575",
+        "mcu.kicad_sch": "f0ea8ddb19ec8fb9c99f040f194c9310ef6438056955d6354b67da72fb2bc5b8",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published-hashes.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 79,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/i2c-sda-overlap-20261104/final.kicad_pcb"
+      },
+      "commit_message": "I2C2_SDAの重複配線を除去\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/i2c-sda-overlap-20261104\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 79,
+      "task": "remaining-routing-20261104",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（remaining-routing-20261104開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "fe87b839b67085e4fc7ba3bea8a97f916912d23c0002b8b5f7203345fa6ec02a",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "6a41e347279a6c57980ac4e632181ccdd726767fadba43c2c653a204a6316575",
+        "mcu.kicad_sch": "f0ea8ddb19ec8fb9c99f040f194c9310ef6438056955d6354b67da72fb2bc5b8",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 80,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/remaining-routing-20261104/before.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（remaining-routing-20261104開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/remaining-routing-20261104\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 80,
+      "task": "remaining-routing-20261104",
+      "kind": "adopted",
+      "subject": "J2・スイッチ・LEDの残配線を完了",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "756a99ab0f5cf64089dbd27843d01327759c48114139baadbed915ee4e7ae595",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "6e1f0d2aabfa0c8b5878979a8ae05c80cc8dd277bf4bf65a7e24cfc7da6d1bea",
+        "mcu.kicad_sch": "f0ea8ddb19ec8fb9c99f040f194c9310ef6438056955d6354b67da72fb2bc5b8",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": "published-hashes.json",
+        "accepted_snapshot_files": {}
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 81,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/remaining-routing-20261104/final.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/remaining-routing-20261104/after-design.md"
+      },
+      "commit_message": "J2・スイッチ・LEDの残配線を完了\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/remaining-routing-20261104\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 81,
+      "task": "sai-pad-clearance-20261105",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（sai-pad-clearance-20261105開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "756a99ab0f5cf64089dbd27843d01327759c48114139baadbed915ee4e7ae595",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "6e1f0d2aabfa0c8b5878979a8ae05c80cc8dd277bf4bf65a7e24cfc7da6d1bea",
+        "mcu.kicad_sch": "f0ea8ddb19ec8fb9c99f040f194c9310ef6438056955d6354b67da72fb2bc5b8",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586",
+        "JUMBLEQ_mainboard_revD_review.md": "27f608d21ca37c49377976aca51eb7dbb1eb853dd73c94122c90d787236299c9"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_review.md"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 82,
+      "source_paths": {
+        "JUMBLEQ_mainboard_revD_review.md": ".work/sai-pad-clearance-20261105/before-JUMBLEQ_mainboard_revD_review.md"
+      },
+      "commit_message": "保存済み調整を反映（sai-pad-clearance-20261105開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/sai-pad-clearance-20261105\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 82,
+      "task": "sai-pad-clearance-20261105",
+      "kind": "adopted",
+      "subject": "SAI経路とC28・R3周辺を改善",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "85b05f42d00e2a2253399ccbb2746e2f9cf3c279f8bc112ad3fd6cea374161f6",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "983e00ad3b3baf283d85444dfeca9346986b9e0cb7e06220c988fe0a549ad274",
+        "mcu.kicad_sch": "f0ea8ddb19ec8fb9c99f040f194c9310ef6438056955d6354b67da72fb2bc5b8",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586",
+        "JUMBLEQ_mainboard_revD_review.md": "27f608d21ca37c49377976aca51eb7dbb1eb853dd73c94122c90d787236299c9"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": null,
+        "accepted_snapshot_files": {
+          "STM32H7S3_Dev_Board.kicad_pcb": "final.kicad_pcb",
+          "JUMBLEQ_mainboard_revD_design.md": "design-updated.md"
+        }
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 83,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/sai-pad-clearance-20261105/review-after/STM32H7S3_Dev_Board.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/sai-pad-clearance-20261105/review-after/JUMBLEQ_mainboard_revD_design.md"
+      },
+      "commit_message": "SAI経路とC28・R3周辺を改善\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/sai-pad-clearance-20261105\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 83,
+      "task": "led-pin-relocation-20261105",
+      "kind": "adopted",
+      "subject": "LED1・LED2のMCUピン割当てを変更",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "6359397bdc417d33a08c385bcdbc8e8a0034bbfa7e523fc5971dde627eab65da",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "f67fe5ee598cd620df1c938d854ea313fda9f86e596509036c34e526d9a14d69",
+        "mcu.kicad_sch": "6bf642fb4739ed58b61d6d2b10680baf3ff97b5790dc7c9eaa2fb655ad3547a5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586",
+        "JUMBLEQ_mainboard_revD_review.md": "27f608d21ca37c49377976aca51eb7dbb1eb853dd73c94122c90d787236299c9"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb",
+        "mcu.kicad_sch"
+      ],
+      "evidence": {
+        "publication_record": null,
+        "accepted_snapshot_files": {
+          "STM32H7S3_Dev_Board.kicad_pcb": "final.kicad_pcb",
+          "JUMBLEQ_mainboard_revD_design.md": "design-updated.md",
+          "dsp.kicad_sch": "dsp.kicad_sch",
+          "mcu.kicad_sch": "mcu.kicad_sch",
+          "power.kicad_sch": "power.kicad_sch",
+          "STM32H7S3_Dev_Board.kicad_sch": "STM32H7S3_Dev_Board.kicad_sch",
+          "usb.kicad_sch": "usb.kicad_sch"
+        }
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 84,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/led-pin-relocation-20261105/review-after/STM32H7S3_Dev_Board.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/led-pin-relocation-20261105/review-after/JUMBLEQ_mainboard_revD_design.md",
+        "mcu.kicad_sch": ".work/led-pin-relocation-20261105/mcu.kicad_sch"
+      },
+      "commit_message": "LED1・LED2のMCUピン割当てを変更\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/led-pin-relocation-20261105\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 84,
+      "task": "sai2b-schematic-20261105",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（sai2b-schematic-20261105開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "a8060a69c99583f5db2bd6b48bcdbbf86d329d4de1c45b922fec2c4d9525a8e9",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "f67fe5ee598cd620df1c938d854ea313fda9f86e596509036c34e526d9a14d69",
+        "mcu.kicad_sch": "6bf642fb4739ed58b61d6d2b10680baf3ff97b5790dc7c9eaa2fb655ad3547a5",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "ef9ae1474339ffb66d987e62bc442c63a80e34685c446160a4682f3bbacee384",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586",
+        "JUMBLEQ_mainboard_revD_review.md": "27f608d21ca37c49377976aca51eb7dbb1eb853dd73c94122c90d787236299c9"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 85,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/sai2b-schematic-20261105/source/STM32H7S3_Dev_Board.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（sai2b-schematic-20261105開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/sai2b-schematic-20261105\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 85,
+      "task": "sai2b-schematic-20261105",
+      "kind": "adopted",
+      "subject": "SAI2BのE11・C12・B12へ回路図を変更",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "a8060a69c99583f5db2bd6b48bcdbbf86d329d4de1c45b922fec2c4d9525a8e9",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "f67fe5ee598cd620df1c938d854ea313fda9f86e596509036c34e526d9a14d69",
+        "mcu.kicad_sch": "59a709824d165b43d64307e062fac4025ad155ea50a5e5b5cec09c69d37f6102",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "bb2e0135a6de54988d158d4893b4b09d10115d991657622bf3e2591591442c74",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586",
+        "JUMBLEQ_mainboard_revD_review.md": "27f608d21ca37c49377976aca51eb7dbb1eb853dd73c94122c90d787236299c9"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_sch",
+        "mcu.kicad_sch"
+      ],
+      "evidence": {
+        "publication_record": null,
+        "accepted_snapshot_files": {
+          "dsp.kicad_sch": "dsp.kicad_sch",
+          "mcu.kicad_sch": "mcu.kicad_sch",
+          "power.kicad_sch": "power.kicad_sch",
+          "STM32H7S3_Dev_Board.kicad_sch": "STM32H7S3_Dev_Board.kicad_sch",
+          "usb.kicad_sch": "usb.kicad_sch"
+        }
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 86,
+      "source_paths": {
+        "mcu.kicad_sch": ".work/sai2b-schematic-20261105/mcu.kicad_sch",
+        "STM32H7S3_Dev_Board.kicad_sch": ".work/sai2b-schematic-20261105/STM32H7S3_Dev_Board.kicad_sch"
+      },
+      "commit_message": "SAI2BのE11・C12・B12へ回路図を変更\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/sai2b-schematic-20261105\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 86,
+      "task": "sai2b-routing-20261105",
+      "kind": "observed",
+      "subject": "保存済み調整を反映（sai2b-routing-20261105開始前）",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "66b5582503ff4c832a79b2aa13d42d10396ecb9ec5c8a301abcd40c9c5f78986",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "f67fe5ee598cd620df1c938d854ea313fda9f86e596509036c34e526d9a14d69",
+        "mcu.kicad_sch": "59a709824d165b43d64307e062fac4025ad155ea50a5e5b5cec09c69d37f6102",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "bb2e0135a6de54988d158d4893b4b09d10115d991657622bf3e2591591442c74",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586",
+        "JUMBLEQ_mainboard_revD_review.md": "27f608d21ca37c49377976aca51eb7dbb1eb853dd73c94122c90d787236299c9"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "manifest_or_before_snapshot": true
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 87,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/sai2b-routing-20261105/source/STM32H7S3_Dev_Board.kicad_pcb"
+      },
+      "commit_message": "保存済み調整を反映（sai2b-routing-20261105開始前）\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/sai2b-routing-20261105\n前回の採用結果と次の確認済み保存状態の差分を反映する。変更者・詳細時刻は断定しない。\n"
+    },
+    {
+      "number": 87,
+      "task": "sai2b-routing-20261105",
+      "kind": "adopted",
+      "subject": "旧SAI配線を撤去しSAI2Bを配線",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "548499534aff3e68da452fd05d242cd6a63077c7f236d64deb64adeee5442793",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "ce1b0d868ccaf15d07d4a2fa9ac426f9d8d58e3f67503946c9bb07ac6aa0bbe2",
+        "mcu.kicad_sch": "59a709824d165b43d64307e062fac4025ad155ea50a5e5b5cec09c69d37f6102",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "bb2e0135a6de54988d158d4893b4b09d10115d991657622bf3e2591591442c74",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586",
+        "JUMBLEQ_mainboard_revD_review.md": "27f608d21ca37c49377976aca51eb7dbb1eb853dd73c94122c90d787236299c9"
+      },
+      "changed_files": [
+        "JUMBLEQ_mainboard_revD_design.md",
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": null,
+        "accepted_snapshot_files": {
+          "STM32H7S3_Dev_Board.kicad_pcb": "final.kicad_pcb",
+          "JUMBLEQ_mainboard_revD_design.md": "design-updated.md"
+        }
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 88,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/sai2b-routing-20261105/review-after/STM32H7S3_Dev_Board.kicad_pcb",
+        "JUMBLEQ_mainboard_revD_design.md": ".work/sai2b-routing-20261105/review-after/JUMBLEQ_mainboard_revD_design.md"
+      },
+      "commit_message": "旧SAI配線を撤去しSAI2Bを配線\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/sai2b-routing-20261105\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    },
+    {
+      "number": 88,
+      "task": "flash-two-fixes-20261106",
+      "kind": "adopted",
+      "subject": "FLASHのクリアランス不足と重複配線端を修正",
+      "state": {
+        "STM32H7S3_Dev_Board.kicad_pcb": "0e20890b88f55f5811bfaeb05e4f6f8877ceb489ffb5ddd1c14db0c96e2444fb",
+        "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+        "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+        "JUMBLEQ_mainboard_revD_design.md": "ce1b0d868ccaf15d07d4a2fa9ac426f9d8d58e3f67503946c9bb07ac6aa0bbe2",
+        "mcu.kicad_sch": "59a709824d165b43d64307e062fac4025ad155ea50a5e5b5cec09c69d37f6102",
+        "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+        "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+        "STM32H7S3_Dev_Board.kicad_sch": "bb2e0135a6de54988d158d4893b4b09d10115d991657622bf3e2591591442c74",
+        "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+        "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586",
+        "JUMBLEQ_mainboard_revD_review.md": "27f608d21ca37c49377976aca51eb7dbb1eb853dd73c94122c90d787236299c9"
+      },
+      "changed_files": [
+        "STM32H7S3_Dev_Board.kicad_pcb"
+      ],
+      "evidence": {
+        "publication_record": null,
+        "accepted_snapshot_files": {
+          "STM32H7S3_Dev_Board.kicad_pcb": "final.kicad_pcb"
+        }
+      },
+      "folded_saved_state_changes": [],
+      "commit_number": 89,
+      "source_paths": {
+        "STM32H7S3_Dev_Board.kicad_pcb": ".work/flash-two-fixes-20261106/final.kicad_pcb"
+      },
+      "commit_message": "FLASHのクリアランス不足と重複配線端を修正\n\n過去の保存記録から再構成した履歴。元の作業日時・作者を再現するものではない。\n参照記録: .work/flash-two-fixes-20261106\n保存記録または検証済み採用ファイルに対応する結果を反映する。\n"
+    }
+  ],
+  "final_design_hashes": {
+    "JUMBLEQ_mainboard_revD_design.md": "ce1b0d868ccaf15d07d4a2fa9ac426f9d8d58e3f67503946c9bb07ac6aa0bbe2",
+    "STM32H7S3_Dev_Board.kicad_dru": "47243a3a5cb8fdf0835cfa52f4c9f3324bc09a0a22fa3b999bcaa72121bf2b8d",
+    "STM32H7S3_Dev_Board.kicad_pcb": "0e20890b88f55f5811bfaeb05e4f6f8877ceb489ffb5ddd1c14db0c96e2444fb",
+    "STM32H7S3_Dev_Board.kicad_pro": "ce9f2f1ec29bc842bed0e4a7a4e464cfae772c594264d82b63bb06cefcb2b6f2",
+    "mcu.kicad_sch": "59a709824d165b43d64307e062fac4025ad155ea50a5e5b5cec09c69d37f6102",
+    "STM32H7S3_Dev_Board.kicad_sch": "bb2e0135a6de54988d158d4893b4b09d10115d991657622bf3e2591591442c74",
+    "dsp.kicad_sch": "74ba848c73b00fc6258ce0f77da4f1cba7b6a579e0f436140d84c3e98a33a84e",
+    "power.kicad_sch": "1bfe34c4a6c398821c03b282236031182976f4cab4c54155761c328038f53047",
+    "usb.kicad_sch": "c003e250a676250ff77268f90e4bb1bb4b8345b066970963e957f4c2c7dd46cf",
+    "revD_new_symbols.kicad_sym": "d84ba19f3ce2abf6a1dce612bbc5fb18409a75994dc1fd9b408cf80fa678e586",
+    "JUMBLEQ_mainboard_revD_review.md": "27f608d21ca37c49377976aca51eb7dbb1eb853dd73c94122c90d787236299c9"
+  },
+  "unresolved_historical_files": [
+    [
+      "JUMBLEQ_mainboard_revD_review.md",
+      "2771267da87971aa02618ac3864902222bf093deab4720c176bc8150e702be1b"
+    ]
+  ],
+  "notes": [
+    "過去の日時・作者を偽装せず、保存記録から再構成した履歴として現在の日時でコミットする。",
+    "初期の保存記録に存在しない回路図やレビュー文書を後の版で補完しない。ファイルは確認できた時点から追加する。",
+    "レビュー文書の旧版2771267dは原本未発見。最初に原本が確認できた版以降のみ含める。",
+    "旧プロジェクトと.workは読み取り専用で保管し、試行版・不採用案はGitへ追加しない。"
+  ],
+  "excluded_tasks_without_design": [
+    "placement-review",
+    "fanout",
+    "route",
+    "r27-review-20261030",
+    "ucpd-isense-proposal-20261102",
+    "dvdd-review-20261102",
+    "mcu-unused-ports-20261103",
+    "review-20261105"
+  ]
+}

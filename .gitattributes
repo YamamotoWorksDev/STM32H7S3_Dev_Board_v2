@@ -1,0 +1,13 @@
+# Keep imported KiCad snapshots byte-for-byte, including their line endings.
+*.kicad_pcb -text
+*.kicad_sch -text
+*.kicad_pro -text
+*.kicad_dru -text
+*.kicad_sym -text
+/JUMBLEQ_mainboard_revD_design.md -text
+/JUMBLEQ_mainboard_revD_review.md -text
+
+# New repository metadata uses LF consistently.
+/.gitattributes text eol=lf
+/.gitignore text eol=lf
+/Docs/history/* text eol=lf
