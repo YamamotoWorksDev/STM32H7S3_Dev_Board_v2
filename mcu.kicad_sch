@@ -12610,7 +12610,7 @@
 	)
 	(wire
 		(pts
-			(xy 492.76 125.73) (xy 495.3 125.73)
+			(xy 492.76 128.27) (xy 495.3 128.27)
 		)
 		(stroke
 			(width 0)
@@ -13500,7 +13500,7 @@
 	)
 	(wire
 		(pts
-			(xy 480.06 125.73) (xy 477.52 125.73)
+			(xy 480.06 128.27) (xy 477.52 128.27)
 		)
 		(stroke
 			(width 0)
@@ -14600,7 +14600,7 @@
 	)
 	(wire
 		(pts
-			(xy 495.3 125.73) (xy 495.3 128.27)
+			(xy 495.3 128.27) (xy 495.3 130.81)
 		)
 		(stroke
 			(width 0)
@@ -15650,7 +15650,7 @@
 	)
 	(wire
 		(pts
-			(xy 477.52 125.73) (xy 477.52 128.27)
+			(xy 477.52 128.27) (xy 477.52 130.81)
 		)
 		(stroke
 			(width 0)
@@ -29434,7 +29434,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 477.52 128.27 0)
+		(at 477.52 130.81 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -29444,7 +29444,7 @@
 		(dnp no)
 		(uuid "e85d0747-61b7-46f5-a3a0-9db51e95cd61")
 		(property "Reference" "#PWR031"
-			(at 477.52 134.62 0)
+			(at 477.52 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29455,7 +29455,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 477.52 132.08 0)
+			(at 477.52 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29465,7 +29465,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 477.52 128.27 0)
+			(at 477.52 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29476,7 +29476,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 477.52 128.27 0)
+			(at 477.52 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29487,7 +29487,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 477.52 128.27 0)
+			(at 477.52 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31743,7 +31743,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 495.3 128.27 0)
+		(at 495.3 130.81 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -31753,7 +31753,7 @@
 		(dnp no)
 		(uuid "fd0c6cfd-629d-4ed8-9dc3-8d206e7d0b08")
 		(property "Reference" "#PWR032"
-			(at 495.3 134.62 0)
+			(at 495.3 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31764,7 +31764,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 495.3 132.08 0)
+			(at 495.3 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -31774,7 +31774,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 495.3 128.27 0)
+			(at 495.3 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31785,7 +31785,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 495.3 128.27 0)
+			(at 495.3 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31796,7 +31796,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 495.3 128.27 0)
+			(at 495.3 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32097,8 +32097,8 @@
 	)
 	(wire
 		(pts
-			(xy 492.76 128.27)
-			(xy 505.46 128.27)
+			(xy 492.76 125.73)
+			(xy 505.46 125.73)
 		)
 		(stroke
 			(width 0)
@@ -32107,7 +32107,7 @@
 		(uuid "2243d657-aace-4c08-9ae0-f932fe54424a")
 	)
 	(label "ADC2_IN2"
-		(at 505.46 128.27 180)
+		(at 505.46 125.73 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -32118,8 +32118,8 @@
 	)
 	(wire
 		(pts
-			(xy 480.06 128.27)
-			(xy 467.36 128.27)
+			(xy 480.06 125.73)
+			(xy 467.36 125.73)
 		)
 		(stroke
 			(width 0)
@@ -32128,7 +32128,7 @@
 		(uuid "7bac6fd1-3144-446b-bc97-1df347485dfc")
 	)
 	(label "ADC2_IN6"
-		(at 467.36 128.27 0)
+		(at 467.36 125.73 0)
 		(effects
 			(font
 				(size 1.27 1.27)
