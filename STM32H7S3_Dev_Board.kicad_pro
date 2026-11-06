@@ -721,6 +721,25 @@
         "via_diameter": 0.5,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.127,
+        "diff_pair_gap": 0.203,
+        "diff_pair_via_gap": 0.203,
+        "diff_pair_width": 0.175,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "General_0p15",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 6,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.15,
+        "tuning_profile": "",
+        "via_diameter": 0.5,
+        "via_drill": 0.3,
+        "wire_width": 6
       }
     ],
     "meta": {
@@ -796,6 +815,134 @@
       {
         "netclass": "PWR_LV",
         "pattern": "MCU_DVDD"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/DSP/DSP_RESET"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/DSP/~{RESET}"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/ETH_RMII_INTN"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/HOST_VBUS_EN"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/HOST_VBUS_FLT"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/I2C2_SCL"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/I2C2_SDA"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/LED0"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/LED1"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/LED2"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/LED_PWR"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/LPUART1_CTS"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/LPUART1_RTS"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/LPUART1_RX"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/LPUART1_TX"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/NRST"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/PWR_ST"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/UCPD_INT"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/UCPD_PWR_EN"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/USART3_RX"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/USART3_TX"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/USER_SW1"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "/MCU/USER_SW2"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "Net-(D1-A)"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "Net-(D2-A)"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "Net-(D3-A)"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "Net-(D4-A)"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "Net-(D7-A)"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "Net-(D8-A)"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "Net-(J6-Pin_2)"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "Net-(U2-BOOT0)"
+      },
+      {
+        "netclass": "General_0p15",
+        "pattern": "Net-(U3-SELFBOOT)"
       }
     ]
   },
