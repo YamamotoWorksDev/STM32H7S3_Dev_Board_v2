@@ -72335,14 +72335,6 @@
 		(uuid "c827d1d8-eb36-4f17-9e71-565c1c451514")
 	)
 	(segment
-		(start 124.136899 100.05)
-		(end 124.025 100.05)
-		(width 0.18)
-		(layer "In2.Cu")
-		(net "/MCU/FLASH_CS")
-		(uuid "ceba1962-8823-41cc-b9e7-c68fef7ae555")
-	)
-	(segment
 		(start 119.65 100.4)
 		(end 120 100.05)
 		(width 0.18)
@@ -73599,8 +73591,8 @@
 		(uuid "365c3544-9e4f-4594-8585-6ac100a3babb")
 	)
 	(segment
-		(start 124.37098 97.575)
-		(end 122.575 97.575)
+		(start 124.42098 97.525)
+		(end 122.625 97.525)
 		(width 0.18)
 		(layer "In2.Cu")
 		(net "/MCU/FLASH_IO5")
@@ -73639,7 +73631,7 @@
 		(uuid "8b4ec592-3d93-4549-89ac-27f5467b1220")
 	)
 	(segment
-		(start 122.575 97.575)
+		(start 122.625 97.525)
 		(end 122.45 97.7)
 		(width 0.18)
 		(layer "In2.Cu")
@@ -73648,7 +73640,7 @@
 	)
 	(segment
 		(start 125.84098 96.105)
-		(end 124.37098 97.575)
+		(end 124.42098 97.525)
 		(width 0.18)
 		(layer "In2.Cu")
 		(net "/MCU/FLASH_IO5")
