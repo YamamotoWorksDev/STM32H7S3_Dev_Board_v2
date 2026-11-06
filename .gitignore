@@ -31,3 +31,12 @@ JST_PH2_BUS-backups/
 STM32H7S3_Dev_Board/OTO_NO_ITA-backups/
 
 STM32H7S3_Dev_Board/STM32H7S3_Dev_Board-backups/
+
+# rev.D working data and generated files
+/.work/
+/.history-recovery/
+/output/
+*-backups/
+*.kicad_prl
+*.lck
+__pycache__/
