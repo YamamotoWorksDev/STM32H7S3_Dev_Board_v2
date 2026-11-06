@@ -755,7 +755,7 @@
 				(justify right)
 			)
 		)
-		(pin "SAI2A_FS" input
+		(pin "SAI2B_FS" input
 			(at 152.4 74.93 0)
 			(uuid "4c5cc365-d397-4d83-9521-443f6c58c4e2")
 			(effects
@@ -765,7 +765,7 @@
 				(justify right)
 			)
 		)
-		(pin "SAI2A_SCK" input
+		(pin "SAI2B_SCK" input
 			(at 152.4 72.39 0)
 			(uuid "b4e971ab-5fba-48e9-928a-e5293acd1cd9")
 			(effects
@@ -775,7 +775,7 @@
 				(justify right)
 			)
 		)
-		(pin "SAI2A_DATA_OUT" output
+		(pin "SAI2B_DATA_OUT" output
 			(at 152.4 77.47 0)
 			(uuid "12bc1d07-754f-4092-8159-1ed3c6c97d95")
 			(effects
