@@ -12620,16 +12620,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 359.41) (xy 209.55 359.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "268a743b-593f-4a90-b611-d550199b94bd")
-	)
-	(wire
-		(pts
 			(xy 172.72 87.63) (xy 172.72 90.17)
 		)
 		(stroke
@@ -12817,16 +12807,6 @@
 			(type default)
 		)
 		(uuid "2f28eb8c-8560-4b18-a9cb-217906de4c08")
-	)
-	(wire
-		(pts
-			(xy 214.63 351.79) (xy 209.55 351.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f51edfc-eac2-4d4a-9cd2-4f59f83bd519")
 	)
 	(wire
 		(pts
@@ -13997,16 +13977,6 @@
 			(type default)
 		)
 		(uuid "7b39607a-e757-4534-b225-87d171bf34fc")
-	)
-	(wire
-		(pts
-			(xy 214.63 349.25) (xy 209.55 349.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7bda7d2f-2d54-4a08-b3b5-638c944ed90e")
 	)
 	(wire
 		(pts
@@ -15190,16 +15160,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 346.71) (xy 209.55 346.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d2c6b8b2-8b8e-4ba0-91da-b4fb4602ee29")
-	)
-	(wire
-		(pts
 			(xy 482.6 180.34) (xy 480.06 180.34)
 		)
 		(stroke
@@ -15267,16 +15227,6 @@
 			(type default)
 		)
 		(uuid "d73a8370-f92e-4a86-86bc-8269cb70a0cd")
-	)
-	(wire
-		(pts
-			(xy 214.63 356.87) (xy 209.55 356.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d805ab6d-04e3-4ebc-8697-5a59f91f1a04")
 	)
 	(wire
 		(pts
@@ -15557,16 +15507,6 @@
 			(type default)
 		)
 		(uuid "ef7a48a4-ec46-49b9-9275-799dfe8c96a7")
-	)
-	(wire
-		(pts
-			(xy 214.63 354.33) (xy 209.55 354.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "efa2c3d3-19a2-41c9-89d6-48b8f9bc989f")
 	)
 	(wire
 		(pts
@@ -16098,16 +16038,6 @@
 		)
 		(uuid "4259d0c9-8f2c-4ae9-989c-1c24ac9c0fc1")
 	)
-	(label "FLASH_IO2"
-		(at 209.55 356.87 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "425c7b18-8c66-478b-9a9a-a2467058283e")
-	)
 	(label "ETH_RMII_INTN"
 		(at 429.26 132.08 180)
 		(effects
@@ -16217,16 +16147,6 @@
 			(justify right bottom)
 		)
 		(uuid "57dbbe17-d3c0-4ae4-b88c-11ad1a1061a1")
-	)
-	(label "FLASH_CLK"
-		(at 209.55 349.25 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5a8f26f6-1445-4b53-90e3-bb0679388bea")
 	)
 	(label "SDMMC2_CK"
 		(at 441.96 111.76 0)
@@ -16828,16 +16748,6 @@
 		)
 		(uuid "c1775cb2-b5ef-4254-b81c-e1638c212640")
 	)
-	(label "FLASH_IO3"
-		(at 209.55 359.41 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c2f5c5e5-12fa-4412-92c7-591177f324c7")
-	)
 	(label "USER_SW1"
 		(at 368.3 242.57 0)
 		(effects
@@ -16887,26 +16797,6 @@
 			(justify left bottom)
 		)
 		(uuid "d6cc9eaf-42f6-4cbd-b756-f7751c28761c")
-	)
-	(label "FLASH_CS"
-		(at 209.55 346.71 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "da1adb32-087b-4d95-9e59-01e2926edccc")
-	)
-	(label "FLASH_IO1"
-		(at 209.55 354.33 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "dc00168f-c4b8-4254-b792-a1cd611220ec")
 	)
 	(label "I2S3_WS"
 		(at 368.3 113.03 0)
@@ -17077,16 +16967,6 @@
 			(justify left bottom)
 		)
 		(uuid "f9fbacaf-7fee-47fb-824f-d10a1d3b6eea")
-	)
-	(label "FLASH_IO0"
-		(at 209.55 351.79 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "fa3c50a8-9a06-4e3f-9585-450b61463a78")
 	)
 	(label "ADC1_IN5"
 		(at 477.52 118.11 180)
@@ -18997,103 +18877,6 @@
 			(project "STM32H7S3_Dev_Board"
 				(path "/9c594957-fd6c-4305-bab8-fba79a4c5d5c/f671a3b0-c237-47c5-a1ed-15d9ecc26d22"
 					(reference "C6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Memory_Flash:W25Q32JVSS")
-		(at 224.79 354.33 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "1bd0a686-6b5c-497b-8bdf-74f4878af601")
-		(property "Reference" "U10"
-			(at 246.4 353.395 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1.8V_QSPI_NOR (DNP)"
-			(at 246.4 355.265 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-8_5.3x5.3mm_P1.27mm"
-			(at 224.79 354.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 224.79 354.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Alternate 1.8V Quad SPI NOR (SOIC-8 208mil / WSON-8 6x5). Mount either U1 or U10."
-			(at 224.79 354.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "845eec72-eb5b-4f51-8608-cc7c865eaea6")
-		)
-		(pin "6"
-			(uuid "3210079f-c114-4f4d-ad8d-3c7b6589b673")
-		)
-		(pin "5"
-			(uuid "85753ecf-50e5-477a-a9a1-78a492d903cd")
-		)
-		(pin "2"
-			(uuid "ed45eab5-ab54-40c8-8ec3-03ee79f8dac3")
-		)
-		(pin "3"
-			(uuid "778cb356-74e7-477f-9b47-c03661b527e8")
-		)
-		(pin "7"
-			(uuid "25134389-f40f-411c-ac82-f5d76e73180a")
-		)
-		(pin "8"
-			(uuid "5a9b817b-3810-433b-900c-cb8b7d5ab88a")
-		)
-		(pin "4"
-			(uuid "6e8b1580-ad04-4d61-9e7c-5c1924344ce9")
-		)
-		(instances
-			(project "STM32H7S3_Dev_Board"
-				(path "/9c594957-fd6c-4305-bab8-fba79a4c5d5c/f671a3b0-c237-47c5-a1ed-15d9ecc26d22"
-					(reference "U10")
 					(unit 1)
 				)
 			)
@@ -27777,84 +27560,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V8")
-		(at 224.79 341.63 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c0c32501-1d34-4936-aa7d-0598a8f33cb5")
-		(property "Reference" "#PWR0312"
-			(at 227.33 339.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1V8"
-			(at 224.79 337.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 224.79 341.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 224.79 341.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 224.79 341.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "790f2983-55bd-4851-babd-25b320b9357f")
-		)
-		(instances
-			(project "STM32H7S3_Dev_Board"
-				(path "/9c594957-fd6c-4305-bab8-fba79a4c5d5c/f671a3b0-c237-47c5-a1ed-15d9ecc26d22"
-					(reference "#PWR0312")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:VCC")
 		(at 474.98 332.74 0)
 		(unit 1)
@@ -31813,84 +31518,6 @@
 			(project "STM32H7S3_Dev_Board"
 				(path "/9c594957-fd6c-4305-bab8-fba79a4c5d5c/f671a3b0-c237-47c5-a1ed-15d9ecc26d22"
 					(reference "#PWR032")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 224.79 367.03 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ff239dfb-fc83-4e1f-8462-8075e65d04e4")
-		(property "Reference" "#PWR0313"
-			(at 227.33 364.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 224.79 370.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 224.79 367.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 224.79 367.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 224.79 367.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e6035d81-c60b-4b89-84a5-f77e66a211f7")
-		)
-		(instances
-			(project "STM32H7S3_Dev_Board"
-				(path "/9c594957-fd6c-4305-bab8-fba79a4c5d5c/f671a3b0-c237-47c5-a1ed-15d9ecc26d22"
-					(reference "#PWR0313")
 					(unit 1)
 				)
 			)
