@@ -610,6 +610,25 @@
       },
       {
         "bus_width": 12,
+        "clearance": 0.127,
+        "diff_pair_gap": 0.203,
+        "diff_pair_via_gap": 0.203,
+        "diff_pair_width": 0.175,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "General_0p15",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 6,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.15,
+        "tuning_profile": "",
+        "via_diameter": 0.45,
+        "via_drill": 0.2,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
         "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
@@ -717,25 +736,6 @@
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.18,
-        "tuning_profile": "",
-        "via_diameter": 0.45,
-        "via_drill": 0.2,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.127,
-        "diff_pair_gap": 0.203,
-        "diff_pair_via_gap": 0.203,
-        "diff_pair_width": 0.175,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "General_0p15",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 6,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.15,
         "tuning_profile": "",
         "via_diameter": 0.45,
         "via_drill": 0.2,
@@ -1086,7 +1086,7 @@
         "uuid": "9c594957-fd6c-4305-bab8-fba79a4c5d5c"
       }
     ],
-    "used_designators": "",
+    "used_designators": "C7,C12,C89",
     "variants": []
   },
   "sheets": [
