@@ -340,7 +340,7 @@
 		(descr "Resistor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R7"
-			(at -1.705 0.05 90)
+			(at -0.005 1.065 90)
 			(layer "F.SilkS")
 			(uuid "69fdcb5c-6850-452b-bbf8-134290a80939")
 			(effects
@@ -6928,7 +6928,7 @@
 		(descr "Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C52"
-			(at 0.497599 -1.597597 90)
+			(at 1.297599 -0.997597 90)
 			(layer "F.SilkS")
 			(uuid "2ca1a91c-ade6-4997-9c88-8fb6d5efbfb8")
 			(effects
@@ -11049,7 +11049,7 @@
 		(descr "Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C51"
-			(at 0.467599 1.102403 90)
+			(at 1.517599 1.027403 90)
 			(layer "F.SilkS")
 			(uuid "8a80f66e-23d0-4c92-bc37-0b3e77bfa51c")
 			(effects
@@ -11590,7 +11590,7 @@
 		(descr "Resistor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R8"
-			(at -0.005 1.59 90)
+			(at -0.005 1.715 90)
 			(layer "F.SilkS")
 			(uuid "4e152141-c56a-4e27-b251-cc24bf8cc446")
 			(effects
@@ -16212,7 +16212,7 @@
 		(at 147.222598 111.750001 90)
 		(tags "ADAU1466WBCPZ300 ")
 		(property "Reference" "U3"
-			(at 6.300001 -0.547598 0)
+			(at 6.475001 -1.297598 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "215559d1-72c6-40ed-87ca-657af308e3e8")
@@ -20541,7 +20541,7 @@
 		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "LED")
 		(property "Reference" "D3"
-			(at -2.6375 0.06 90)
+			(at -2.5575 0.91 90)
 			(layer "F.SilkS")
 			(uuid "d7f1f1a2-ac97-46bc-9625-25d576533a12")
 			(effects
@@ -21402,7 +21402,7 @@
 		(descr "Resistor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf)")
 		(tags "resistor")
 		(property "Reference" "R30"
-			(at 0.65 1.75 0)
+			(at -0.05 1 0)
 			(layer "F.SilkS")
 			(uuid "a2f8e2a3-e6b1-46c1-8cdc-e02a89fd2403")
 			(effects
@@ -21850,7 +21850,7 @@
 		(uuid "942dd40e-2ef9-4c02-9923-7fff3912c675")
 		(at 111.37 82.84 90)
 		(property "Reference" "SW3"
-			(at 0.015 2.45 90)
+			(at 0.64 2.455 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "b7b2d340-2357-44df-9768-528a29751fba")
@@ -27407,7 +27407,7 @@
 		(descr "Resistor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R1"
-			(at -2.68381 -0.025 90)
+			(at -1.7 0.05 90)
 			(layer "F.SilkS")
 			(uuid "89e1fbf3-6e5c-42fc-a749-28fbb18bcc3e")
 			(effects
@@ -28030,7 +28030,7 @@
 		(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "LED")
 		(property "Reference" "D2"
-			(at -2.6625 0 90)
+			(at -2.5325 0.91 90)
 			(layer "F.SilkS")
 			(uuid "413ab659-ad7f-4361-8c0d-332181d9ad9f")
 			(effects
@@ -29894,7 +29894,7 @@
 		(descr "module CMS SOT223 4 pins")
 		(tags "CMS SOT")
 		(property "Reference" "U5"
-			(at 3.825 4.625 0)
+			(at 4.175 4.475 0)
 			(layer "F.SilkS")
 			(uuid "e17262f8-4bad-4c0c-9a9f-28c03afda443")
 			(effects
@@ -31473,7 +31473,7 @@
 		(descr "Resistor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R6"
-			(at -1.71 -0.05 90)
+			(at 0.02 -0.96 90)
 			(layer "F.SilkS")
 			(uuid "5a62ddc6-fdbd-49c6-84e5-cfc7593f5625")
 			(effects
@@ -32415,7 +32415,7 @@
 		(at 120.2543 127.275 180)
 		(tags "ESDA25P35-1U1M ")
 		(property "Reference" "U8"
-			(at 2.1543 -0.475 0)
+			(at -1.8557 -0.425 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "e10022fb-069d-42a8-9cdf-8fba1bccefbd")
