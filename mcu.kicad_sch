@@ -20117,7 +20117,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "336e0572-7810-40ca-a6c3-d14e5d43d83a")
 		(property "Reference" "R28"
 			(at 133.206 249.255 0)
@@ -29589,7 +29589,7 @@
 				)
 			)
 		)
-		(property "Value" "MX25UW25645GXDI00"
+		(property "Value" "MX25UW6345G"
 			(at 223.52 317.195 0)
 			(show_name no)
 			(do_not_autoplace no)
