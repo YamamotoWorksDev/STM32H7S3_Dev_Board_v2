@@ -8813,7 +8813,7 @@
 				)
 			)
 		)
-		(property "Footprint" "My_Parts:CP_72_6_ADI"
+		(property "Footprint" "My_Parts:CP_72_6_ADI_2"
 			(at 199.136 128.524 0)
 			(hide yes)
 			(show_name no)

@@ -17362,7 +17362,7 @@
 			)
 		)
 	)
-	(footprint "My_Parts:CP_72_6_ADI"
+	(footprint "My_Parts:CP_72_6_ADI_2"
 		(layer "F.Cu")
 		(uuid "8cfce377-30e9-4313-bd78-dceb3f346f9f")
 		(at 147.222598 111.750001 90)
@@ -21020,6 +21020,82 @@
 				)
 			)
 		)
+		(pad "" smd custom
+			(at -1.25 -1.25 90)
+			(size 0.5 0.5)
+			(layers "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy 1 1) (xy -1.25 1) (xy -1.25 0.2) (xy 0.2 -1.25) (xy 1 -1.25)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(uuid "6ee3c32f-6de5-4e92-b155-36893eb13c28")
+		)
+		(pad "" smd custom
+			(at -1.25 1.25 90)
+			(size 0.5 0.5)
+			(layers "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy 1 -1) (xy 1 1.25) (xy 0.2 1.25) (xy -1.25 -0.2) (xy -1.25 -1)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(uuid "21045f38-b3d7-4a6d-b19a-b71987841f72")
+		)
+		(pad "" smd custom
+			(at 1.25 -1.25 90)
+			(size 0.5 0.5)
+			(layers "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -1 1) (xy -1 -1.25) (xy -0.2 -1.25) (xy 1.25 0.2) (xy 1.25 1)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(uuid "3f79f01f-a68e-469e-a015-01232a085e4c")
+		)
+		(pad "" smd custom
+			(at 1.25 1.25 90)
+			(size 0.5 0.5)
+			(layers "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -1 -1) (xy 1.25 -1) (xy 1.25 -0.2) (xy -0.2 1.25) (xy -1 1.25)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(uuid "20d6d62b-5129-4472-855b-aed2aa06a394")
+		)
 		(pad "1" smd rect
 			(at -4.877402 -4.249999 180)
 			(size 0.2492 0.8548)
@@ -21671,7 +21747,7 @@
 		(pad "73" smd rect
 			(at 0 0 90)
 			(size 5.3 5.3)
-			(layers "F.Cu" "F.Mask" "F.Paste")
+			(layers "F.Cu" "F.Mask")
 			(net "GND")
 			(pinfunction "EP(GND)_73")
 			(pintype "passive")
